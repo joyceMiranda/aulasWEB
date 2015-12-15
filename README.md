@@ -1,1 +1,1 @@
-Repositório com conteúdo referente às aulas de Desenvolvimento de Aplicações WEB.
+Repositório com conteúdo referente à disciplina: Desenvolvimento de Aplicações WEB.
