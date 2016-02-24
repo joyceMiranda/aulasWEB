@@ -1,0 +1,65 @@
+<!doctype html>
+<html style="height:100%">
+	<head> 
+		<meta charset="utf-8">
+		<title>Sections</title>
+		<style>
+			body{ height:100%; margin:0 }
+			header{ background-color:azure }
+			div{ width:700px; text-align:center; margin:auto }
+			.maisVendidos{ background-color:skyblue;
+								 width:340px;height:300px;float:left;
+								 margin:20px 5px 20px auto } /*margin: top right bottom left*/	
+			.novidades{ background-color:deeppink;
+							width:340px;height:300px;float:right;
+							margin:20px auto 20px auto } /*margin: top right bottom left	*/
+							
+			section h1:first-child{
+				text-transform:uppercase;
+			}
+
+		</style>
+	</head>
+	<body >
+		<!--
+		<div>
+			<section class="maisVendidos"> 	
+				<h1>Mais Vendidos</h1>
+			</section>
+			<section class="novidades">		
+				<h1>Novidades</h1>
+			</section>	
+		</div>
+		<footer style="background-color:lavender;clear:both" >&nbsp;</footer>
+		-->
+		<div>
+			<section class="maisVendidos"> 
+				<h1>Mais Vendidos</h1>
+				<table >
+					<tr>
+						<td> <figure> <img src="../imgs/p1.jpg" width="75px"/></figure></td>
+						<td> <strong>Produto x</strong> <br> Valor R$</td>
+					</tr>
+					<tr>
+						<td> <figure> <img src="../imgs/p2.jpg" width="75px"/></figure></td>
+						<td> <strong>Produto y</strong>  <br> Valor R$</td>
+					</tr>
+				</table>
+			</section>
+			<section class="novidades">			
+				<h1>Novidades</h1>
+				<table >
+					<tr>
+						<td> <figure> <img src="../imgs/p3.jpg" width="75px"/></figure></td>
+						<td> <strong>Produto z</strong> <br> Valor R$</td>
+					</tr>
+					<tr>
+						<td> <figure> <img src="../imgs/p4.jpg" width="75px"/></figure></td>
+						<td> <strong>Produto w</strong>  <br> Valor R$</td>
+					</tr>
+				</table>
+			</section>	
+		</div>
+		
+	</body>
+</html>
