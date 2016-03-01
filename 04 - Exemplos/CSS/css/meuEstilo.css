@@ -1,0 +1,19 @@
+*{
+	font-size: 30px;
+}
+
+table, tr, td{ 
+	border: 1px black solid;
+	text-align: center;
+	margin:auto;
+}
+				
+[type="email"]:focus{
+	border-color:red;
+	border-style: dotted;
+}
+
+[type="submit"]:hover{
+	color: blue;
+	font-size:40px;
+}
