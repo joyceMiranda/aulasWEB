@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Formulário de Cadastro de Usuário</title>
+</head>
+
+<script type="text/javascript">
+	function validar(){
+		var nome = document.getElementById('txtNome').value;
+		var login = document.getElementById('txtLogin').value;
+		var senha = document.getElementById('txtSenha').value;
+		if(nome == ""){
+			alert("Informe o nome.");
+			return false;
+		}else if(login == ""){
+			alert("Informe o login.");
+			return false;
+		}else if(senha == ""){
+			alert("Informe a senha.");
+			return false;
+		}else{
+			return true;
+		}
+	}
+</script>
+<body>
+	<form method="post" action="cadastra.html" novalidate onsubmit="return validar()">
+	<table>
+	 <tr> <td>Nome:</td>
+		<td><input type="text" id="txtNome" name="txtNome" size="50" required></td> </tr>
+	  <tr><td>Login:</td>
+		<td><input type="text" id="txtLogin" name="txtLogin" size="50" required></td> </tr>
+	  <tr> <td>Senha:</td>
+		<td><input type="password" id="txtSenha" name="txtSenha" size="50" required></td> </tr>
+	  <tr> <td colspan="2"> <input type="submit" value="Cadastrar" > 	</td> </tr>
+	</table>
+   </form>
+</body>	
+
+</html>

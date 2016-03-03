@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>Formulário de Cadastro de Usuário</title>
+</head>
+<script type="text/javascript">
+	function validarRadio(){
+		var checado = "";
+        for (i=0; i< document.all("rdSexo").length; i++) {
+		    if ( document.all("rdSexo")[i].checked) {
+			   checado = true ;
+			   break;
+		    }
+	     }	     
+	     if (checado != true) {
+            alert("Escolha uma opção!");
+		    return false;
+	     }
+	}
+
+
+	function validarCheck(){
+		var checado = "";
+		var campoCheck = document.getElementsByName("ckInteresse");
+        for (i=0; i< campoCheck.length; i++) {
+		    if ( campoCheck[i].checked) {
+			   checado = true ;
+			   break;
+		    }
+	     }		 
+	     if (checado != true) {
+            alert("Escolha uma opção!!");
+		    return false;
+	     }
+	}
+
+
+	function mudaCor(element){
+        document.body.style.backgroundColor=element.value;
+	}	
+	
+</script>
+<body >
+	<form method="post" action="cadastra.html" onsubmit="return validarRadio()" name="form">
+	<table border=1>
+	 <tr>
+	    <td>Sexo:</td>
+		<td>
+			<input type="radio" name="rdSexo" value="M"> Masculino
+			<input type="radio" name="rdSexo" value="F"> Feminino
+		</td>
+	  </tr>
+	  <tr>
+	 	<td colspan="2" align=center>
+	 		<input type="submit" name="btnCadastrar" value="Validar" >
+	 	</td>
+	 </tr>
+	</table>
+   	</form>
+
+   	<form method="post" action="cadastra.html" onsubmit="return validarCheck()" name="form">
+		<table border=1>
+		 <tr> <td>Interesses:</td>
+			<td>
+				<input type="checkbox" name="ckInteresse" value="E"> Exatas
+				<input type="checkbox" name="ckInteresse" value="H"> Humanas
+				<input type="checkbox" name="ckInteresse" value="B"> Biológicas
+			</td> </tr>
+		  <tr>
+			<td colspan="2" align=center>
+				<input type="submit" name="btnCadastrar" value="Validar" >
+			</td>
+		 </tr>
+		</table>
+   	</form>
+
+   	<form method="post" action="cadastra.html" name="form">
+	<table border=1>
+	 <tr>
+	    <td>Escolha sua cor de preferência:</td>
+		<td>
+            <select name="cbCor" onchange="mudaCor(this)">
+                    <option value="white">Padrão</option>
+                    <option value="blue">Azul</option>
+                    <option value="red">Vermelho</option>
+                    <option value="pink">Rosa</option>
+            </select>
+		</td>
+	  </tr>
+	</table>
+   	</form>
+   	
+</body>
+
+</html>
