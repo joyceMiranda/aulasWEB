@@ -1,15 +1,40 @@
 <html>
 	<head>
 		<title> Usando JQuery</title>
+		<meta charset="utf-8"/>
 		<script src="jQuery.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				
+				$("#txtNome").css("text-transform", "uppercase");
+				
+				$("form").on("submit", function(){
+					if($("#txtNome").val() == ''){
+						alert('Informe o nome para prosseguir!');
+						return false;
+					}else{
+						alert("Informação enviada!");
+						return true;
+					}
+				});
+				
+			});
+			
+		</script>
+		
 		
 	</head>
 	<body>
 		<h1>Testando JQuery</h1>
+		
+		<form action="usandoJQuery.html" method="post" >
+			Nome: <input type="text" name="nome" id="txtNome">
+			<input type="submit" value="Enviar" id="btnEnviar" >
+		</form>
+		
 	</body>
 	
-	<script>
-			alert($("h1").text());
-	</script>
+	
 
 </html>
