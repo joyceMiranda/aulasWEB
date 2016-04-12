@@ -1,0 +1,4 @@
+1. Relatório semanal desde do início da orientação 
+2. Atualização da documentação (casos de uso, diagrama de classes)
+3. Cronograma de desenvolvimento até o metade de junho 
+4. Documentação mínima do XP; Análise de estudo de casos
