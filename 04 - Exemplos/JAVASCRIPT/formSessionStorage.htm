@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Testando SessionStorage</title>
+</head>
+<script type="text/javascript">
+	do{
+		produto = "";
+		if(!sessionStorage.carrinho){	
+			//criando carrinho (array) de produtos
+			carrinho = [];
+			//incluindo produto no carrinho (array)
+			produto = prompt("Informe o produto. Digite Fim para encerrar.");
+			if(produto == "Fim") break;
+			carrinho[0] = produto;
+			//incluindo carrinho (array) na sessão
+			sessionStorage.carrinho =  carrinho;	
+		}else{				
+			//-- atualizando carrinho  --//
+			//recuperando carrinho sessão
+			carrinho = (sessionStorage.carrinho).split(",");
+			//recuperando quantidade produtos no carrinho
+			qtde = carrinho.length;
+			//adicionando novo produto ao carrinho
+			produto = prompt("Informe o produto. Digite Fim para encerrar.");
+			if(produto == "Fim") break;
+			carrinho[qtde] = produto;
+			//atualizando carrinho da sessão
+			sessionStorage.carrinho =  carrinho;
+		}
+	}while(produto != "Fim");
+	
+	//exibindo informações do carrinho
+	if(sessionStorage.carrinho){	
+		carrinho = (sessionStorage.carrinho).split(",");
+		for(i=0; i < carrinho.length; i++){
+			document.write(carrinho[i] + "<br>");
+		}
+	}
+		//sessionStorage.removeItem("carrinho");	
+</script>
+
+</html>
