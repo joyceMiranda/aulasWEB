@@ -1,0 +1,32 @@
+<form method="post" action="cadastra.php">
+  Login:
+   <input type="text" name="txtLogin">
+  Senha:
+   <input type="password" name="txtSenha">
+  <br>	
+   <input type="submit" value="Enviar" id="btnEnviar"> 
+</form>
+
+<h1>Título da Página</h1>
+
+<script>
+document.querySelector("h1").addEventListener(
+ "click",
+ function(){
+    msgText("Volte Sempre!");
+ });
+ 
+function msgText(texto){
+  alert(texto);
+}
+</script>
+
+<h1>Título da Página</h1>
+<script>
+document.querySelector("h1").addEventListener("click", msg);
+ 
+function msg(){
+  alert("Seja Bem vindo(a)");
+}
+</script>
+

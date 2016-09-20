@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Testando LocalStorage</title>
+	<script>	
+	
+	function adicionarProduto(){
+		do{
+			produto = "";
+			if(!localStorage.getItem("carrinho")){	
+				//incluindo produto no carrinho (array)
+				produto = prompt("Informe o produto ou FIM:");
+				if(produto == "FIM") break;
+				//criando carrinho (array) de produtos
+				carrinho = [];
+				carrinho[0] = produto;
+				//incluindo carrinho (array) na sessão
+				localStorage.setItem("carrinho", carrinho);	
+			}else{				
+				//-- atualizando carrinho  --//
+				//adicionando novo produto ao carrinho
+				produto = prompt("Informe o produto ou FIM:");
+				if(produto == "FIM") break;
+				//recuperando carrinho sessão
+				carrinho = localStorage.getItem("carrinho").split(",");
+				//recuperando quantidade produtos no carrinho
+				qtde = carrinho.length;
+				carrinho[qtde] = produto;
+				//atualizando carrinho da sessão
+				localStorage.setItem("carrinho", carrinho);
+			}
+		}while(produto != "FIM");
+		listarProdutos();
+	}
+	
+	function listarProdutos(){
+		if(!localStorage.getItem("carrinho")){
+			document.getElementById("itensCarrinho").innerHTML  = "Carrinho Vazio!!";
+		}else{
+			itens = "";
+			//exibindo informações do carrinho
+			carrinho = (localStorage.getItem("carrinho")).split(",");
+			for(i=0; i < carrinho.length; i++){
+				itens = carrinho[i] + "<br>" + itens;
+			}
+			document.getElementById("itensCarrinho").innerHTML = itens;
+		}
+	}
+	
+	function esvaziarCarrinho(){
+		localStorage.removeItem("carrinho");
+		listarProdutos();
+	}
+	
+</script>
+</head>
+<body>
+	<input type="button" value="Adicionar Produto ao Carrinho" id="btnAdicionar" />
+	<input type="button" value="Esvaziar Carrinho" id="btnExcluir" />
+    <br><br>
+	<div id="itensCarrinho"></div>
+</body>
+
+<script type="text/javascript">
+	
+	document.getElementById("btnAdicionar").addEventListener("click", adicionarProduto );
+	document.getElementById("btnExcluir").addEventListener("click", esvaziarCarrinho);
+
+	listarProdutos();
+
+</script>
+
+
+
+
+
+</html>
