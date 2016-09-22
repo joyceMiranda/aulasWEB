@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<produtos>
+	<produto>
+		<codigo>1</codigo>
+		<nome>Livro A</nome>
+		<valor>100.00</valor>
+	</produto>
+	<produto>
+		<codigo>2</codigo>
+		<nome>Livro B</nome>
+		<valor>150.00</valor>
+	</produto>
+</produtos>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="jQuery.js"></script>
+</head>
+<body>
+
+<h1>
+Interação JSON + JQuery
+</h1>
+<h3>Leitura Arquivo JSON:</h3>
+
+<button type="button" onclick="loadDoc()">Lista de Produtos</button>
+<br><br>
+<div id="lista"></div>
+</body>
+
+<script>
+
+function loadDoc() {
+	listaProdutos = '[{ 						' +
+					'	 "codigo" : 1,			' +
+					'	 "nome"   : "Livro A",	' +
+					'	 "valor"  : 100.00		' +
+					'	}, 						' +
+					'	{  						' +
+					'	 "codigo" : 2,			' +
+					'	 "nome"   : "Livro B",	' +
+					'	 "valor"  : 10.00	 	' +
+					'	}] 						';	
+	listaProdutos = $.parseJSON(listaProdutos); 
+	produtos = "";
+	$.each(listaProdutos, function(indice, produto){
+		var nome = produto.nome;
+		produtos = produtos + nome + " <br> ";			
+	});
+	$("#lista").html(produtos);
+}
+
+function loadDocExternal() {
+	/***OBS: Para funcionar deve ser executado a partir de um servidor web ****/
+	$.getJSON('arquivo_JSON.json', function(JSONDoc){
+		var produtos = "";
+		$.each(JSONDoc, function(indice, produto){
+			var nome = produto.nome;
+			produtos = produtos + nome + " <br> ";			
+		});
+		$("#lista").html(produtos);
+});
+}
+
+
+</script>
+
+</html>
+

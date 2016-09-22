@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script src="jQuery.js"></script>
+</head>
+<body>
+
+<h1>
+Interação XML + JQuery
+</h1>
+
+<h2>
+**OBS: Para funcionar deve ser executado a partir de um servidor web 
+</h2>
+
+<h3>Leitura Arquivo XML:</h3>
+
+<button type="button" onclick="loadDoc()">Lista de Produtos</button>
+<br><br>
+<div id="lista"></div>
+</body>
+
+<script>
+function loadDoc() {
+	$.get('arquivo_XML.xml', function(xmlDoc){
+		var produtos = "";
+		$(xmlDoc).find('produto').each(function(){
+			var $produto = $(this); 
+			var nome = $produto.find('nome').text();
+			produtos = produtos + nome + " <br> ";			
+		});
+		$("#lista").html(produtos);
+});
+}
+</script>
+
+</html>
+

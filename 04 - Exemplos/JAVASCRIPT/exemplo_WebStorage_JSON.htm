@@ -2,7 +2,9 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Testando LocalStorage</title>
-	<script>	
+	<script src="jQuery.js"></script>
+	<script>
+
 	
 	function adicionarProduto(){
 		do{
@@ -15,19 +17,19 @@
 				carrinho = [];
 				carrinho[0] = produto;
 				//incluindo carrinho (array) na sessão
-				localStorage.setItem("carrinho", carrinho);	
+				localStorage.setItem("carrinho", JSON.stringify(carrinho));	
 			}else{				
 				//-- atualizando carrinho  --//
 				//adicionando novo produto ao carrinho
 				produto = prompt("Informe o produto ou FIM:");
 				if(produto == "FIM") break;
 				//recuperando carrinho sessão
-				carrinho = localStorage.getItem("carrinho").split(",");
+				carrinho = JSON.parse(localStorage.getItem("carrinho"));
 				//recuperando quantidade produtos no carrinho
 				qtde = carrinho.length;
 				carrinho[qtde] = produto;
 				//atualizando carrinho da sessão
-				localStorage.setItem("carrinho", carrinho);
+				localStorage.setItem("carrinho",  JSON.stringify(carrinho));
 			}
 		}while(produto != "FIM");
 		listarProdutos();
@@ -39,7 +41,7 @@
 		}else{
 			itens = "";
 			//exibindo informações do carrinho
-			carrinho = (localStorage.getItem("carrinho")).split(",");
+			carrinho = JSON.parse(localStorage.getItem("carrinho"));
 			for(i=0; i < carrinho.length; i++){
 				itens = carrinho[i] + "<br>" + itens;
 			}
@@ -51,7 +53,7 @@
 		localStorage.removeItem("carrinho");
 		listarProdutos();
 	}
-	
+		
 </script>
 </head>
 <body>
@@ -59,6 +61,25 @@
 	<input type="button" value="Esvaziar Carrinho" id="btnExcluir" />
     <br><br>
 	<div id="itensCarrinho"></div>
+	
+	<br><br><br>
+	
+	<table>
+	<tr>
+		<td>Código:</td>
+		<td><input type="text" id="codigo" value="1"></td>
+	</tr>
+	<tr>
+		<td>Nome:</td>
+		<td><input type="text" id="nome" value="Livro A"></td>
+	</tr>
+	<tr>
+		<td>Valor:</td>
+		<td><input type="text" id="valor" value="100.00"></td>
+	</tr>
+	</table>
+	<br>
+	<div id="produtoJSON"></div>
 </body>
 
 <script type="text/javascript">
@@ -75,3 +96,53 @@
 
 
 </html>
+
+
+
+
+<script>
+/*	Exemplos JSON */
+/*	
+	produtos = [];
+	produtos[0] = "Livro 1";
+	produtos[1] = "Livro 2";
+	
+	sessionStorage.setItem("listaProdutos", JSON.stringify(produtos));
+	produtos = JSON.parse(sessionStorage.getItem("listaProdutos"));
+
+	
+	produto = JSON.stringify({
+					Codigo   : 10001,
+					Nome     : "Livro 1",
+					Valor    : 100.00
+				});
+	
+	produtos = JSON.stringify([{
+					Codigo   : 10001,
+					Nome     : "Livro 1",
+					Valor    : 100.00
+				},{
+					Codigo   : 10002,
+					Nome     : "Livro 2",
+					Valor    : 150.00
+				}]);
+				
+	produto = JSON.stringify({
+					Codigo   : document.getElementById("codigo").value,
+					Nome     : document.getElementById("nome").value,
+					Valor    : document.getElementById("valor").value
+				});
+				
+	
+	produto = JSON.stringify({
+					Codigo   : $("#codigo").val(),
+					Nome     : $("#nome").val(),
+					Valor    : $("#valor").val()
+				});
+				
+	sessionStorage.setItem("produto", produto);
+	produto = JSON.parse(sessionStorage.getItem("produto"));
+	document.getElementById("produtoJSON").innerHTML = "Nome: "+produto.Nome;
+	
+*/	
+</script>	
