@@ -5,6 +5,10 @@ table{
 	margin:auto;
 	border: 3px solid purple;
 	border-radius: 5px;
+}
+
+thead{
+	background-color:pink;
 }			
 
 tbody{
@@ -24,9 +28,7 @@ tfoot{
 }
 			
 
-th{
-	background-color:lightgreen;
-}
+
 
 .css tr:nth-child(2n){		
 	background-color:lightblue;
