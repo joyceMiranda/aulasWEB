@@ -1,11 +1,11 @@
 header{width:100%;height:30px}
 
 nav{background-color:turquoise;
-height:26px;position:relative;}
+height:26px;}
 
 .iframeTopo{border:none;width:100%;}
 
-.iframeMenu{border:none;position:relative}
+.iframeMenu{border:none;position:absolute;}
 
 .tituloPagina{padding-top:50px;padding-bottom:50px;}
 
