@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>Formulário</title>
+		<meta charset="utf-8">		
+		<link rel="stylesheet" href="css/estilos.css" />
+	</head>
+	<body>
+		
+	<form action="processa.php" method="post">
+		  
+		  <table>
+		    <tr>
+			  <td colspan="2">Formulário de Login</td>
+			</tr>
+			<tr>
+			  <td>Login:</td>
+			  <td>
+				<input type="text" name="txtLogin" maxlength="10" />
+			  </td>
+			</tr>
+			<tr>
+			  <td>Senha:</td>
+			  <td>
+				<input type="password" name="txtSenha" maxlength="10" />
+			  </td>
+			</tr>
+			<tr>
+			  <td colspan="2">
+				<input type="submit" value="Enviar" />
+				<input type="reset" value="Limpar" />
+			  </td>
+			</tr>
+		  </table>
+		  
+		<br><br>
+		<h3> Input: Radio </h3>
+		<input type="radio" name="rdSexo" value="F" > Feminino
+		<input type="radio" name="rdSexo" value="M" checked="checked"> Masculino
+
+		<br><br>
+		<h3> Input: Checkbox </h3>
+		<input type="checkbox" name="ckLinguagem" value="1"> C
+		<input type="checkbox" name="ckLinguagem" value="2" checked="checked"> JAVA
+		<input type="checkbox" name="ckLinguagem" value="3" checked="checked"> PHP
+
+		<br><br>
+		<h3> Caixa de Sugestão - DataList </h3>
+		<datalist id="lstBairro">
+			<option value="Aleixo" />
+			<option value="Alvorada" />
+			<option value="Chapada" />
+			<option value="Cidade Nova" />			
+		</datalist>
+		
+		Informe seu bairro:
+		<input type="text" name="txtBairro" list="lstBairro" />
+		
+		<br><br>
+		<h3> Input: File </h3>
+		<input type="file" name="txtArquivo" />
+		
+		<br><br>
+		<h3> Área de Texto: Textarea </h3>
+		<textarea  rows="4" cols="50" > Termo de compromisso 
+		(1) ....
+		(2) ....
+		</textarea>
+		
+		<br><br>
+		<h3> Conjunto de Campos: FieldSet </h3>
+		<fieldset>
+			<legend> Dados Pessoais </legend>
+			Nome:<input type="text" name="txtNome" maxlength="100" />
+			<br><br>
+			Email:<input type="text" name="textEmail" maxlength="25" />
+		</fieldset>
+		
+		<br><br>
+		<h3> Required, Placeholder, Pattern </h3>
+		<table>
+			<tr><td> Nome:  </td>
+				<td><input  type="text " name="txtNome" pattern ="[a-zA-Z ]*"   autofocus
+							placeholder="Fulano de Tal" title="Apenas Letras" required > </td></tr>
+			<tr> <td> CEP:  </td>
+				<td><input  type="text " name="txtCEP" pattern ="[0-9]{5}-[0-9]{3}"  
+							placeholder="00000-000" title="00000-000"  required > </td></tr>
+			<tr><td> Telefone:  </td>
+				<td><input  type="tel" name="txtTelefone"  pattern ="[0-9]{2} [0-9]{4,5}-[0-9]{4}" 
+							placeholder="00 0000-0000" title="00 0000-0000" required > </td></tr>
+			<tr><td> Data:  </td>
+				<td><input  type="text" name="txtData"  pattern ="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}"  
+							placeholder="dd/mm/yyyy" title="dd/mm/yyyy" required > </td>			
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="Enviar" > </td> </tr>
+		</table>
+		
+	</form>
+	
+	
+		
+	</body>
+
+
+</html>
