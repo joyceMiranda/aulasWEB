@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Template Bootstrap</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  
+  <style>
+	.container{
+		background-color:pink;
+	}
+	
+	article:nth-child(2n){
+		background-color:ligthblue;
+	}
+	
+	article:nth-child(2n+1){
+		background-color:gray;
+	}
+  
+  </style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<article class="col-sm-3">Produto 1</article>
+			<article class="col-sm-3">Produto 2</article>
+			<article class="col-sm-3">Produto 1</article>
+			<article class="col-sm-3">Produto 2</article>
+		</div>	
+	</div>
+ 
+  
+  <!-- jQuery (necessario para os plugins Javascript do Bootstrap) -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
