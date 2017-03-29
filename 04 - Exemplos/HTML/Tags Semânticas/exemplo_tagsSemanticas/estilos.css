@@ -1,0 +1,83 @@
+header{width:100%;height:30px}
+
+nav{background-color:turquoise;
+height:26px;}
+
+.iframeTopo{border:none;width:100%;}
+
+.iframeMenu{border:none;position:absolute;}
+
+.tituloPagina{padding-top:50px;padding-bottom:50px;}
+
+footer{background-color:turquoise; height:10px; clear:both }
+
+h1{font-weight:bold;
+text-align:center}
+
+/* Configurações do menu*/
+			
+*{margin: 0px; padding: 0px;white-space:0}
+
+
+body{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	height:100%;
+}
+
+
+/*Configurando Itens Principais */
+.menu{
+	list-style-type:none;
+}
+.menu > li{ 
+	display:table-cell;
+	border: 1px solid lightgrey; 
+}				
+.menu li a{ 
+	color:grey; 
+	text-decoration:none; 
+	padding:5px 10px; 
+	display:block;
+}
+
+/* Configurando/Escondendo SubMenu*/
+.menu li ul{
+	list-style:none; 
+	border:1px solid lightgrey; 
+	background-color: whitesmoke; 
+	position:absolute;
+	display:none;				
+}
+
+/*Formatando Submenu*/
+.menu li ul li{
+	border:1px solid lightgrey; 
+	width:150px;
+}
+
+/*Interação com Menu */ 
+.menu li a:hover{
+	background:grey;  
+	color:cyan; 
+	text-shadow:0px 0px 10px cyan; 
+}
+
+/*Exibindo Submenu*/
+.menu li:hover ul{
+	display:block; 
+}
+
+
+#topo{
+	width:100%;
+	height:65px;
+}
+
+#imgTopo{
+	width:100%;
+	height: 30px;
+}
+
+
+
