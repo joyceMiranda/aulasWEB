@@ -9,35 +9,23 @@
 	function adicionarProduto(){
 		do{
 			produto = "";
-			if(!localStorage.getItem("carrinho")){	
-				//incluindo produto no carrinho (array)
-				produto = prompt("Informe o produto ou FIM:");
-				if(produto == "FIM") break;
-				//criando carrinho (array) de produtos
-				carrinho = [];
-				carrinho[0] = produto;
-				//incluindo carrinho (array) na sessão
-				localStorage.setItem("carrinho", JSON.stringify(carrinho));	
-			}else{				
-				//-- atualizando carrinho  --//
-				//adicionando novo produto ao carrinho
-				produto = prompt("Informe o produto ou FIM:");
-				if(produto == "FIM") break;
-				//recuperando carrinho sessão
+			produto = prompt("Informe o produto ou FIM:");
+			if(produto == "FIM") break;
+			//criando carrinho (array) de produtos
+			carrinho = [];
+			//se existir carrinho salvo
+			if(localStorage.getItem("carrinho") != null){
 				carrinho = JSON.parse(localStorage.getItem("carrinho"));
-				//recuperando quantidade produtos no carrinho
-				qtde = carrinho.length;
-				carrinho[qtde] = produto;
-				//atualizando carrinho da sessão
-				localStorage.setItem("carrinho",  JSON.stringify(carrinho));
 			}
-		}while(produto != "FIM");
+			carrinho.push(produto);
+			localStorage.setItem("carrinho",  JSON.stringify(carrinho));
+		}while(produto.toUpperCase() != "FIM");
 		listarProdutos();
 	}
 	
 	function listarProdutos(){
-		if(!localStorage.getItem("carrinho")){
-			document.getElementById("itensCarrinho").innerHTML  = "Carrinho Vazio!!";
+		if(localStorage.getItem("carrinho") == null){
+			$("#itensCarrinho").html("Carrinho Vazio!!");
 		}else{
 			itens = "";
 			//exibindo informações do carrinho
@@ -45,7 +33,7 @@
 			for(i=0; i < carrinho.length; i++){
 				itens = carrinho[i] + "<br>" + itens;
 			}
-			document.getElementById("itensCarrinho").innerHTML = itens;
+			$("#itensCarrinho").html(itens);
 		}
 	}
 	
@@ -69,8 +57,8 @@
 
 <script type="text/javascript">
 	
-	document.getElementById("btnAdicionar").addEventListener("click", adicionarProduto );
-	document.getElementById("btnExcluir").addEventListener("click", esvaziarCarrinho);
+	$("#btnAdicionar").click(adicionarProduto);
+	$("#btnExcluir").click(esvaziarCarrinho);
 
 	listarProdutos();
 
