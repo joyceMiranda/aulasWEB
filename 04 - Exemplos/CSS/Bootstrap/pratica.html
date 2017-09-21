@@ -12,32 +12,29 @@
   <link href="css/style.css" rel="stylesheet">
   
   <style>
-	.container{
-		background-color:pink;
-	}
-	
-	article:nth-child(2n){
-		background-color:ligthblue;
-	}
-	
-	article:nth-child(2n+1){
-		background-color:gray;
-	}
-  
+		.container-fluid{
+			background-color: pink;
+		}
+		
+		article:nth-child(2n){
+			background-color: blue;
+		}
+		
+		article:nth-child(2n+1){
+			background-color: yellow;
+		}
   </style>
+  
 </head>
 <body>
-
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<article class="col-sm-3">Produto 1</article>
-			<article class="col-sm-3">Produto 2</article>
-			<article class="col-sm-3">Produto 1</article>
-			<article class="col-sm-3">Produto 2</article>
-		</div>	
-	</div>
- 
-  
+			<article class="col-md-3">A</article>
+			<article class="col-md-3">B</article>
+			<article class="col-md-3">A</article>
+			<article class="col-md-3">B</article>			
+		</div>
+	</div>  
   <!-- jQuery (necessario para os plugins Javascript do Bootstrap) -->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
