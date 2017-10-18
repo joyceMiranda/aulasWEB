@@ -9,6 +9,7 @@
 				
 				$("#txtNome").css("text-transform", "uppercase");
 				
+
 				$("form").on("submit", function(){
 					if($("#txtNome").val() == ''){
 						alert('Informe o nome para prosseguir!');
@@ -19,20 +20,25 @@
 					}
 				});
 				
+				
 			});
+			
+			
+			
+			
 			
 		</script>
 		
 		
 	</head>
 	<body>
-		<h1>Testando JQuery</h1>
+		<h1>Testando JQuery - Validação de Formulário</h1>
 		
 		<form action="usandoJQuery.html" method="post" >
 			Nome: <input type="text" name="nome" id="txtNome">
 			<input type="submit" value="Enviar" id="btnEnviar" >
-			<input type="button" value="Botão Genérico" id="btnGenerico" >
 		</form>
+		
 		
 	</body>
 	
