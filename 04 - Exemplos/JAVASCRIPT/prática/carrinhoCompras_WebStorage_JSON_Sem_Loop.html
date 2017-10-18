@@ -8,7 +8,7 @@
 			$(document).ready(function(){
 				
 				$(".imgProduto").css("width", "100px");
-				$(".imgCesta").css("width", "25");
+				$(".imgCesta").css("width", "25px");
 				
 				$("#btnShow").on("click", function(){
 					listarProdutos();
@@ -41,6 +41,8 @@
 				}
 				carrinho.push(produto);
 				window.sessionStorage.setItem("carrinho", JSON.stringify(carrinho));				
+				alert('Produto adicionado com sucesso');
+				listarProdutos();
 			}
 			
 			
@@ -58,7 +60,7 @@
 			<a href="#" id="_p1" onclick="addCarrinho(this)" ><img class="imgCesta" src="imgs/cesta.jpg" /></a>
 		</div>
 		<br>
-		<div id="_p2">
+		<div>
 			<img class="imgProduto" src="imgs/p2.jpg" />
 			<div id="nome_p2">CD Coldplay</div>
 			<div id="valor_p2">45,00</div>
