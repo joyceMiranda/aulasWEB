@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Testando LocalStorage</title>
+	<script src="jQuery.js"></script>
+	<script>
+
+	
+	function adicionarProduto(){
+		do{
+			produto = "";
+			produto = prompt("Informe o produto ou FIM:");
+			if(produto == "FIM") break;
+			//criando carrinho (array) de produtos
+			carrinho = [];
+			//se existir carrinho salvo
+			if(localStorage.getItem("carrinho") != null){
+				carrinho = JSON.parse(localStorage.getItem("carrinho"));
+			}
+			carrinho.push(produto);
+			localStorage.setItem("carrinho",  JSON.stringify(carrinho));
+		}while(produto.toUpperCase() != "FIM");
+		listarProdutos();
+	}
+	
+	function listarProdutos(){
+		if(localStorage.getItem("carrinho") == null){
+			$("#itensCarrinho").html("Carrinho Vazio!!");
+		}else{
+			itens = "";
+			//exibindo informações do carrinho
+			carrinho = JSON.parse(localStorage.getItem("carrinho"));
+			for(i=0; i < carrinho.length; i++){
+				itens = carrinho[i] + "<br>" + itens;
+			}
+			$("#itensCarrinho").html(itens);
+		}
+	}
+	
+	function esvaziarCarrinho(){
+		localStorage.removeItem("carrinho");
+		listarProdutos();
+	}
+		
+</script>
+</head>
+<body>
+	<input type="button" value="Adicionar Produto ao Carrinho" id="btnAdicionar" />
+	<input type="button" value="Esvaziar Carrinho" id="btnExcluir" />
+    <br><br>
+	<div id="itensCarrinho"></div>
+	
+	<br><br><br>
+	
+	<div id="produtoJSON"></div>
+</body>
+
+<script type="text/javascript">
+	
+	$("#btnAdicionar").click(adicionarProduto);
+	$("#btnExcluir").click(esvaziarCarrinho);
+
+	listarProdutos();
+
+</script>
+
+
+
+
+
+</html>
+
+
+
+
+<script>
+/*	Exemplos JSON */
+/*	
+	produtos = [];
+	produtos[0] = "Livro 1";
+	produtos[1] = "Livro 2";
+	
+	sessionStorage.setItem("listaProdutos", JSON.stringify(produtos));
+	produtos = JSON.parse(sessionStorage.getItem("listaProdutos"));
+
+	
+	produto = JSON.stringify({
+					Codigo   : 10001,
+					Nome     : "Livro 1",
+					Valor    : 100.00
+				});
+	
+	produtos = JSON.stringify([{
+					Codigo   : 10001,
+					Nome     : "Livro 1",
+					Valor    : 100.00
+				},{
+					Codigo   : 10002,
+					Nome     : "Livro 2",
+					Valor    : 150.00
+				}]);
+				
+	produto = JSON.stringify({
+					Codigo   : document.getElementById("codigo").value,
+					Nome     : document.getElementById("nome").value,
+					Valor    : document.getElementById("valor").value
+				});
+				
+	
+	<!--<table>
+	<tr>
+		<td>Código:</td>
+		<td><input type="text" id="codigo" value="1"></td>
+	</tr>
+	<tr>
+		<td>Nome:</td>
+		<td><input type="text" id="nome" value="Livro A"></td>
+	</tr>
+	<tr>
+		<td>Valor:</td>
+		<td><input type="text" id="valor" value="100.00"></td>
+	</tr>
+	</table>
+	<br> -->
+	
+	produto = JSON.stringify({
+					Codigo   : $("#codigo").val(),
+					Nome     : $("#nome").val(),
+					Valor    : $("#valor").val()
+				});
+				
+	sessionStorage.setItem("produto", produto);
+	produto = JSON.parse(sessionStorage.getItem("produto"));
+	document.getElementById("produtoJSON").innerHTML = "Nome: "+produto.Nome;
+	
+*/	
+</script>	
