@@ -15,7 +15,89 @@
 </head>
 <body>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cursos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">TADS</a>
+          <a class="dropdown-item" href="#">Sistemas de Informação</a>
+		  <a class="dropdown-item" href="#">Engenharia da Computação</a>
+		 <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Mecânica</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+  <br><br>
+ 
+<div class="container"> 
+  <form action="processa.php" method="post" >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Login</label>
+    <input type="email" class="form-control" name="txtEmail" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Senha</label>
+    <input type="password" class="form-control" name="txtSenha" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+
+  <br><br>
+  <div class="container">
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Telefone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Fulano</td>
+      <td>@fulano</td>
+      <td>123456</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Ciclano</td>
+      <td>@ciclano</td>
+      <td>9876545</td>
+    </tr>
+     <tr>
+      <th scope="row">2</th>
+      <td>Beltrano</td>
+      <td>@beltrano</td>
+      <td>78976543</td>
+    </tr>
+  </tbody>
+</table></div>
+  
   <br><br>
   
   Sem bootstrap
