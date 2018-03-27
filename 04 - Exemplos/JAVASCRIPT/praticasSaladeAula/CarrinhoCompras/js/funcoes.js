@@ -4,6 +4,8 @@ $(document).ready(function(){
 	
 });
 
+document.getElementById("txtCodigo").innerHTML
+
 function addProduto(produto){
 	id = $(produto).attr("id");
 	carrinho = [];	
