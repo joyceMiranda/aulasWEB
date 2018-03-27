@@ -7,11 +7,6 @@
 		<script>
 			$(document).ready(function(){
 				
-				$("#txtNome").css("text-transform", "uppercase");
-				
-				$(".imgProduto").css("width", "100px");
-				$(".imgCesta").css("width", "25");
-				
 				$("form").on("submit", function(){
 					if($("#txtNome").val() == ''){
 						alert('Informe o nome para prosseguir!');
@@ -26,37 +21,7 @@
 					listarProdutos();
 				})
 				
-				
-				
 			});
-			
-			function listarProdutos(){
-					carrinho = [];
-					if(window.sessionStorage.getItem("carrinho") != null){
-						carrinho = JSON.parse(window.sessionStorage.getItem("carrinho"));
-					}
-					itens = "";
-					for(i=0; i<carrinho.length;i++){
-						itens = itens + "<br>" + JSON.parse(carrinho[i]).Nome + " - " + JSON.parse(carrinho[i]).Valor;
-					}
-					$("#produtosCarrinho").html(itens);
-				}
-			
-			function addCarrinho(component){
-				//alert(component.id) simply javascript
-				id = $(component).attr('id');
-				produto = JSON.stringify({
-							Id: id,
-							Nome: $("#nome"+id).text(),
-							Valor: $("#valor"+id).text()
-							});
-				carrinho = [];
-				if(window.sessionStorage.getItem("carrinho") != null){
-					carrinho = JSON.parse(window.sessionStorage.getItem("carrinho"));
-				}
-				carrinho.push(produto);
-				window.sessionStorage.setItem("carrinho", JSON.stringify(carrinho));				
-			}
 			
 			
 			
@@ -73,23 +38,6 @@
 			<input type="button" value="Botão Genérico" id="btnGenerico" >
 		</form>
 		
-		<h1>Testando JQuery - Carrinho de Compras</h1> 
-		<div>
-			<img class="imgProduto" src="imgs/p1.jpg" />
-			<div id="nome_p1">CD Ventura</div>
-			<div id="valor_p1">35,00</div>
-			<a href="#" id="_p1" onclick="addCarrinho(this)" ><img class="imgCesta" src="imgs/cesta.jpg" /></a>
-		</div>
-		<br>
-		<div id="_p2">
-			<img class="imgProduto" src="imgs/p2.jpg" />
-			<div id="nome_p2">CD Coldplay</div>
-			<div id="valor_p2">45,00</div>
-			<a href="#" id="_p2" onclick="addCarrinho(this)"><img class="imgCesta" src="imgs/cesta.jpg" /></a>
-		</div>
-		<br>
-		<input type="button" id="btnShow" value="Listar Produtos do Carrinho" />
-		<div id="produtosCarrinho"></div>
 		
 	</body>
 	
