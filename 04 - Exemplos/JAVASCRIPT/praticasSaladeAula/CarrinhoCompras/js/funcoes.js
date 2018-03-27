@@ -1,7 +1,9 @@
 $(document).ready(function(){
 	
 	
-	
+	$("imgCesta").on("click", function(){
+		
+	});
 });
 
 document.getElementById("txtCodigo").innerHTML
