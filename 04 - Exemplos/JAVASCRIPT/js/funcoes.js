@@ -6,4 +6,3 @@ function somar() {
 	document.getElementById('resultado').value = soma; 
 	
 }
-

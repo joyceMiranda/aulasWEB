@@ -1,3 +1,6 @@
+			
+			
+			
 			$(document).ready(function(){
 				
 				$(".imgProduto").css("width", "100px");
