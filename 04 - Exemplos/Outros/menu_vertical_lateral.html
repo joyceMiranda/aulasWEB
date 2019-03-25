@@ -20,9 +20,10 @@
 				list-style-type:none;
 			}
 			.menu > li{ 
-				display:table-cell;
 				border: 1px solid lightgrey;
 				position: relative;
+				display:block; /*here*/
+				width: 150px; /*here*/
 			}				
 			.menu li a{ 
 				color:grey; 
@@ -37,6 +38,8 @@
 				border:1px solid lightgrey; 
 				background-color: whitesmoke; 
 				position:absolute;
+				left: 150px; /*here*/
+				top: 0px; /*here*/
 				display:none;				
 			}
 			

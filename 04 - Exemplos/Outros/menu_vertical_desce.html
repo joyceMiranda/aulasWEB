@@ -20,7 +20,8 @@
 				list-style-type:none;
 			}
 			.menu > li{ 
-				display:table-cell;
+				display:block; /*here*/
+				width: 150px; /*here*/
 				border: 1px solid lightgrey;
 				position: relative;
 			}				
@@ -36,14 +37,14 @@
 				list-style-type:none; 
 				border:1px solid lightgrey; 
 				background-color: whitesmoke; 
-				position:absolute;
+				position:static; /*here*/
 				display:none;				
 			}
 			
 			/*Formatando Submenu*/
 			.menu li ul li{
 				border:1px solid lightgrey; 
-				width:150px;
+				width:148px; /*here*/
 			}
 			
 			/*Interação com Menu */ 

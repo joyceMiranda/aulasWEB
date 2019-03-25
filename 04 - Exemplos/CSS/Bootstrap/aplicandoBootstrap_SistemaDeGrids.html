@@ -24,8 +24,16 @@
 		background-color: pink;
 	}
 	
-	.col-sm-*{
-		font-size: 100px;
+	@media only screen and (min-width: 768px) {
+	  /* For desktop: */
+	  .col-md-2 {color:red}
+	  .col-md-10 {color:blue}
+	}
+	
+	@media only screen and (max-width: 576px) {
+	  /* For mobile: */
+	  .col-sm-2 {color:green; }
+	  .col-sm-10 {color:purple; }
 	}
   
   </style>
@@ -35,8 +43,8 @@
   
  <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-10">AAAAA</div>
-		<div class="col-sm-2">BBBBB</div>
+		<div class="col-sm-8">AAAAA</div>
+		<div class="col-sm-4">BBBBB</div>
 	</div>
  </div>
  
@@ -55,8 +63,8 @@
  
  <div class="container-fluid">
 	 <div class="row">
-	  <article class="col-sm-9 col-md-3">col-sm-9 col-md-3</article>
-	  <article class="col-sm-3 col-md-9">col-sm-3 col-md-9</article>
+	  <article class="col-sm-10 col-md-2">A</article>
+	  <article class="col-sm-2 col-md-10">B</article>
 	</div>
  </div>
  
