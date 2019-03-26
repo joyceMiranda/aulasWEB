@@ -24,17 +24,19 @@
 		background-color: pink;
 	}
 	
-	@media only screen and (min-width: 768px) {
-	  /* For desktop: */
-	  .col-md-2 {color:red}
-	  .col-md-10 {color:blue}
+	@media only screen and (max-width: 768px) {
+	  /* For mobile: */
+	  .col-sm-2 {color:red; font-size:50px}
+	  .col-sm-10 {color:blue; font-size:50px}
 	}
 	
-	@media only screen and (max-width: 576px) {
-	  /* For mobile: */
-	  .col-sm-2 {color:green; }
-	  .col-sm-10 {color:purple; }
+	@media only screen and (min-width: 768px) {
+	  /* For desktop: */
+	  .col-md-2 {color:yellow; font-size:25px}
+	  .col-md-10 {color:green; font-size:25px}
 	}
+	
+	
   
   </style>
   
