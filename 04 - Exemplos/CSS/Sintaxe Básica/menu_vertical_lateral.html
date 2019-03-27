@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title>Menu</title>
+		<style>
+			
+			
+			/* Configurações preliminares*/
+			
+			*{margin: 0px; padding: 0px;white-space:0}
+ 
+			body{
+				font-family: arial, helvetica, sans-serif;
+				font-size: 12px;
+			}
+			
+			/*Configurando Itens Principais */
+			.menu{
+				list-style-type:none;
+			}
+			.menu > li{ 
+				display:block;
+				width: 150px;
+				border: 1px solid lightgrey;
+				position: relative;
+			}				
+			.menu li a{ 
+				color:grey; 
+				text-decoration:none; 
+				padding:5px 10px; 
+				display:block;
+			}
+			
+			/* Configurando/Escondendo SubMenu*/
+			.menu li ul{
+				list-style-type:none; 
+				border:1px solid lightgrey; 
+				background-color: whitesmoke; 
+				position:absolute;
+				left: 150px;
+				top:0px;
+				display:none;				
+			}
+			
+			/*Formatando Submenu*/
+			.menu li ul li{
+				border:1px solid lightgrey; 
+				width:150px;
+			}
+			
+			/*Interação com Menu */ 
+			.menu li a:hover{
+				background:grey;  
+				color:cyan; 
+				text-shadow:0px 0px 10px cyan; 
+			}
+			
+			/*Exibindo Submenu*/
+			.menu li:hover ul{
+				display:block; 
+			}
+			
+			section > p{
+				color:red;
+			}
+			
+			
+
+		</style>
+	</head>
+	<body>
+		<nav>
+		  <ul class="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Cursos Disponíveis</a>
+					<ul>
+						  <li><a href="#">Técnico em Informática</a></li>
+						  <li><a href="#">Técnico em Redes</a></li>
+						  <li><a href="#">Técnico em Manutenção e Suporte </a></li>                   
+					</ul>
+				</li>
+				<li><a href="#">Links</a>
+					<ul>
+						  <li><a href="#">Teste A</a></li>
+						  <li><a href="#">Teste B</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contato</a></li>               
+			</ul>			
+		</nav>
+	
+	</body>
+</html>
