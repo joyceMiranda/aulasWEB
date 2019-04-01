@@ -7,14 +7,19 @@
 		<!--referência bootstrap -->
 		<link rel="stylesheet" href="css/bootstrap.css">
 	</head>
-	<body class="container-fluid">
+	<body class="container-fluid" ng-app="aplicacao">
 		<header>
 			<h1 style="text-align: center; color: blue">
 				Bem vindo ao Curso de Angular!
 			</h1>
 		</header>
+		<div ng-controller="PrimeiroController" class="bg-light">
+			Olá {{nome}}, seja bem-vindo(a)!
+		</div>
 		<!--referência angular -->
 		<script type="text/javascript" src="js/libs/angular.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/primeiro-controller_2.js"></script>
 	</body>
 </html>
 
