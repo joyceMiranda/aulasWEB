@@ -1,0 +1,136 @@
+body{  
+	text-transform: uppercase;
+	font-size: 15px
+}
+
+table{
+	width: 75%;
+	text-align: center;
+	margin: auto;
+	
+}
+
+.tblInner td {
+	border: none;
+	text-align:left;
+	
+}
+
+.tblInner th {
+	border: none;
+	background-color: white;
+	text-align: right;
+	font-size: 10px;
+	font-weight: bold;
+	width: 140px;
+
+
+}
+
+.tblInner{
+	width: 100%
+}
+
+
+
+
+th.main{
+	background-color: #A9F5F2;
+	border: 1px solid black;
+}
+
+th,tfoot td{
+	background-color: #E0F8F7;
+	border: 1px solid black;
+}
+
+td{
+	background-color: white;
+	border: 1px solid black;
+}
+
+button{
+	font-weight: bold;
+}
+
+.tdLink{
+	background-color: #FBEFF5;
+	text-transform: none;
+
+}
+
+.iframeTopo{
+	border: none;
+	width: 100%;
+	height: 190px;
+}
+
+.iframeForm{
+	border: none;
+	width: 100%;
+
+}
+
+
+p.center{
+	text-align: center;
+}
+
+
+
+.logoFig{
+	text-align: center;
+}
+
+.logoImg{	
+	height: 100px;
+	width: 200px;
+}
+
+h2{	/* para o Link de TOPO */
+	text-align: center;
+}
+
+
+
+h3{	
+	text-align: center;
+}
+
+.styledescription{
+	color: darkred;
+	text-align: justify;
+}
+
+
+h1{
+ background-color: darkturquoise;
+ text-align: center;
+}
+
+h2{
+ background-color: turquoise;
+ text-align: center;
+}
+
+
+ul{
+	font-size:20px;
+}
+
+legend{
+	font-weight: bold;
+}
+
+label{
+	font-size: 12px;
+	font-weight: bold;
+	text-transform:capitalize;
+}
+
+
+fieldset{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
