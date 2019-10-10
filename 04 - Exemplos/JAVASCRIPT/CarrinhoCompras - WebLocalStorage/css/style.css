@@ -1,0 +1,27 @@
+#carrinho{
+	text-align: center;
+	background-color: pink;
+	font-weight: bold;
+	color: darkblue;
+}
+
+.blocoProduto{
+	text-align: center;
+	margin-top:10px;
+	padding: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.blocoProduto:nth-child(2n+1){
+	background-color: lightblue;
+}
+
+.blocoProduto:nth-child(2n){
+	background-color: lightgreen;
+}
+
+.listaProdutos{
+	margin: auto;
+	width: 50%;
+}

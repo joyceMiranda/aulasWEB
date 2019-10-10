@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html>
+ <head>
+  <title>Formulário de Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+ </head>
+ 
+ <body>
+ 
+  <iframe class="iframeTopo" src="topo.html"></iframe>
+  
+  <form action="cadastro.php" method="get">
+  
+	 
+			<h1 colspan="2">Formulário de Cadastro</h1>
+		
+				<fieldset>
+				 <legend> Dados de Acesso</legend>
+					<table class="tblInner">
+					 <tr>
+						<th>Login*:</th> 
+						<td>
+							<input type="text" name="txtLogin" size="30" required>
+						</td>
+					 </tr>
+					 <tr>
+						<th>Senha*:</th> 
+						<td>
+							<input type="password" name="txtSenha" required>
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2"><label>(*) campos obrigatórios</label></td>
+					</tr>
+					</table>
+				</fieldset>
+
+				<br>
+			
+				<fieldset>
+					<legend>Dados Pessoais</legend>
+					<table class="tblInner">
+					 <tr>
+					  <th>Nome Completo:</th> 
+						<td>
+					   	 <input type="text" name="txtNome" size="30" 
+						 pattern="[a-z A-Z]*" title="Apenas letras.">
+						</td>
+					 </tr>
+					 <tr>
+					  <th>Email:</th> 
+						<td>
+					   	 <input type="text" name="txtEmail"   >
+						</td>
+					 </tr>
+					 <tr>
+					  <th>Telefone:</th> 
+						<td>
+					   	 <input type="text" name="txtTelefone"   >
+						</td>
+					 </tr>
+					 <tr>
+					  <th>Data de Nascimento:</th> 
+						<td>
+					   	 <input type="text" name="txtNascimento" >
+						</td>
+					 </tr>
+					 
+					 <tr>
+					  <th>Gênero:</th>
+						<td>
+							<input type="radio" name="rdGenero" value="F" >
+							<label>Feminino</label>
+							<input type="radio" name="rdGenero" value="M" >
+							<label>Masculino</label>
+						</td>
+					 </tr>
+					 <tr>
+						<th>Foto de Perfil:</th>
+						<td>
+							<input type="file" name="fileFotoPerfil" disabled />
+						</td>
+					</tr>
+				  </table>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Endereço</legend>
+					<table class="tblInner">
+					 <tr>
+					  <th>CEP:</th> 
+						<td>
+					   	 <input type="text" name="txtCEP" 
+						  placeholder="00000-000"
+						  pattern="[0-9]{5}-[0-9]{3}"
+						 />
+						</td>
+						<th>Estado:</th> 
+						<td>
+							<select>
+								<option value="">Selecione</option>
+								<option value="AM">Amazonas</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="SP">São Paulo</option>
+							</select>
+						</td>
+						<tr>
+						<th>Cidade:</th> 
+						<td>
+							<input type="text" name="txtCidade"		 />
+						</td>
+						<th>Bairro:</th> 
+						<td>
+					   	 <datalist id="lstBairro">				
+								<option value="Alvorada"/>
+								<option value="Armando Mendes"/>
+								<option value="Aleixo"/>
+								<option value="Centro"/>
+								<option value="Compensa"/>					
+							</datalist>
+							<input type="text" name="txtBairro" list="lstBairro" required />
+						</td>
+						
+						
+					 </tr>
+					 <tr>
+					  <th>Logradouro:</th> 
+						<td>
+					   	 <input type="text" name="txtLogradouro" required />
+						</td>
+					  <th>Número:</th> 
+						<td>
+					   	 <input type="text" name="txtNumero" required />
+						</td>
+					 </tr>
+					 
+					</table>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>Interesses</legend>
+					<table class="tblInner">
+					<tr>
+						
+					   	<td> <input type="checkbox" name="ckCurso" value="01">
+							<label>Técnico</label>
+							<input type="checkbox" name="ckCurso" value="02">
+							<label>Superior</label>
+							<input type="checkbox" name="ckCurso" value="03">
+							<label>EJA</label>
+						</td>
+					</tr>
+					 <tr>
+						<td colspan="2">
+						<p class="center">
+					   	 <textarea cols="50" rows="5" 
+							placeholder="Use esse espaço para inserir informações adicionais"></textarea>
+						</p>
+						</td>
+					</tr>
+					
+					</table>
+				</fieldset>
+				
+				<p class="center">
+					<button type="submit">Enviar</button>
+			
+		<br><br>
+  
+  </form>
+  
+ </body>
+ 
+</html>

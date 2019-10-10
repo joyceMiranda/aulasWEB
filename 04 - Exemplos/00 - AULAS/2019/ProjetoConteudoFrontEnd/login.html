@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+ <head>
+  <title>Formulário de Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/funcoes.js"></script>
+ </head>
+ 
+ <body>
+ 
+  <iframe class="iframeTopo" src="topo.html"></iframe>
+  
+  
+
+  <form action="login.php" method="post" 
+		onsubmit="return validar()" >
+	
+	<table>
+	 <tr>
+		<th colspan="2">Formulário de Login</th>
+	 </tr>
+	 <tr>
+		<th>Login:</th> 
+		<td>
+		 <input type="text" id="txtLogin" maxlength="15" size="50" >
+		</td>
+	 </tr>
+	 <tr>
+		<th>Senha:</th>
+		<td>
+			<input type="password" id="txtSenha" maxlength="10" size="50" >
+		</td>
+	 </tr>
+	 <tr>
+		<th>Cor Preferida:</th>
+		<td>
+			<input type="color" id="color" 
+				onchange="mudaCorDeFundo(this.value)">
+		</td>
+	 </tr>
+	 <tfoot>
+		<tr>
+	     <td colspan="2"> 
+			<button type="submit" class="btnHover" >Enviar</button>
+			<button type="reset" class="btnHover">Limpar</button>
+		 </td>
+	    </tr>
+		<tr>
+		 <td colspan="2" class="tdLink">
+			<a href="cadastro.html">
+				Cadastre-se
+			</a>
+		 </td>
+		</tr>
+	 </tfoot>
+	 
+	</table>
+	
+  </form>
+ 
+ </body>
+ 
+</html>

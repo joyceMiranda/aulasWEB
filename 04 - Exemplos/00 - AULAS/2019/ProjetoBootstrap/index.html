@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template Bootstrap</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet"> 
+  
+  <link href="css/estilo.css" rel="stylesheet"> 
+
+</head>
+<body>
+<!-- 
+ <h1>Hello, Boostrap!!</h1>
+ <br>
+ 
+
+ <div class="container">
+	<h2>Botões outline</h2>
+	<button type="button" class="btn btn-outline-warning">Salvar</button>
+	<button type="button" class="btn btn-outline-danger">Excluir</button>
+ </div>
+ -->
+ 
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+	<figure>
+		<img src="img/logoIfam.png" class="logoIcone" />
+	</figure>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cursos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Técnico</a>
+		  <div class="dropdown-divider"></div>		  
+          <a class="dropdown-item" href="#">Superior</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">EJA</a>
+        </div>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="#">Página Oficial</a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="#">Contato</a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</nav>
+
+<section>
+	
+	<div class="container">
+		<form>
+		  <div class="form-group">
+			<label for="exampleInputEmail1">Login</label>
+			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+			<small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+		  </div>
+		  <div class="form-group">
+			<label for="exampleInputPassword1">Senha</label>
+			<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+		  </div>
+		  <div class="form-group form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Lembrar Senha</label>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+	</div>
+
+</section>
+<br>
+<section>
+<div class="container">
+	<table class="table table-hover">
+	  <thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Primeiro</th>
+		  <th scope="col">Último</th>
+		  <th scope="col">Nickname</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <th scope="row">1</th>
+		  <td>Mark</td>
+		  <td>Otto</td>
+		  <td>@mdo</td>
+		</tr>
+		<tr>
+		  <th scope="row">2</th>
+		  <td>Jacob</td>
+		  <td>Thornton</td>
+		  <td>@fat</td>
+		</tr>
+		<tr>
+		  <th scope="row">3</th>
+		  <td colspan="2">Larry the Bird</td>
+		  <td>@twitter</td>
+		</tr>
+	  </tbody>
+	  </div>
+</table>
+
+</section>
+  
+  
+  <!-- jQuery (necessario para os plugins Javascript do Bootstrap) -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
