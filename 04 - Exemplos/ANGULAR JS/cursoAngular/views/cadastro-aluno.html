@@ -1,0 +1,28 @@
+<div class="well" ng-controller="NovaInscricaoController">
+	<form name="form_1">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group form-group-default">
+					<label>Nome</label>
+					<input type="text" class="form-control" name="nome_aluno" id="nome_aluno" ng-model="nome_aluno"  ng-minlength="10" ng-maxlength="50" ng-required="true">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group form-group-default">
+					<label>Idade</label>
+					<input type="number" class="form-control" name="idade_aluno" id="idade_aluno" ng-model="idade_aluno"   ng-required="true">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<button class="btn btn-primary" ng-click="submeter()" >
+					Adicionar
+				</button>
+			</div>
+		</div>
+		</div>
+	</form>
+</div>
+
+

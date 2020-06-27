@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--metas de segurança -->
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta http-equiv="Content-type" content="text/html">
+		<!--referência bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+	</head>
+	<body class="container-fluid" ng-app="aplicacao">
+		<header>
+			<h1 style="text-align: center; color: blue">
+				Bem vindo ao Curso de Angular!
+			</h1>
+		</header>
+		<nav class="navbar navbar-default" ng-controller="MenuController">
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="nav navbar-nav">
+					<li><a ng-click="goInicio()">Início</a></li>
+					<li><a ng-click="goListagem()">Alunos</a></li>
+					<li><a ng-click="goCadastro()">Cadastro</a></li>
+					<li><a ng-click="goPrevisao()">Previsão do Tempo</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div ng-view></div>
+
+
+		<!--referência angular -->
+		<script type="text/javascript" src="js/libs/angular.js"></script>
+		<script type="text/javascript" src="js/libs/ngResource.js"></script>
+		<script type="text/javascript" src="js/libs/ngRoute.js"></script>
+		<script type="text/javascript" src="js/app2.js"></script>
+		<script type="text/javascript" src="js/menu-controller.js"></script>
+		<script type="text/javascript" src="js/listagem-alunos-controller.js"></script>
+		<script type="text/javascript" src="js/previsao-tempo-controller.js"></script>
+		<script type="text/javascript" src="js/alunos-collection-service.js"></script>
+		<script type="text/javascript" src="js/nova-inscricao-controller.js"></script>
+	</body>
+</html>
+
+
+
