@@ -1,0 +1,14 @@
+[ 
+  { "id": 1, 
+    "desc": "Ato 1 - Saguão de Entrada"},
+  { "id": 2, 
+    "desc": "Ato 2 - Rotunda"},
+  { "id": 3, 
+    "desc": "Ato 3 - Corredor"},
+  { "id": 4, 
+    "desc": "Ato 4 - Origem da Terra e Répteis"},
+  { "id": 5, 
+    "desc": "Ato 5 - Origem dos Dinossauros"},
+  { "id": 6, 
+    "desc": "Ato 6 - Surgimento da Espécie Humana"}
+]
